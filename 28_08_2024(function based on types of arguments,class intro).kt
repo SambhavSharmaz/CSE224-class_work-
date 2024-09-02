@@ -41,6 +41,11 @@ fun ftoc(f:Int):Int {
     val c = (f - 32) * 5/9
     return c
 }
+fun main() {
+    val f =200
+    val res =ftoc(f)
+    println(res)
+}
 // find factorial
 fun fact(n:Int): Int {
     if(n<=1) return 1
@@ -52,11 +57,6 @@ fun main(){
     print("Enter a number: ")
     var n= readln().toInt()
     println("Factorial of $n is: ${fact(n)}")
-}
-fun main() {
-    val f =200
-    val res =ftoc(f)
-    println(res)
 }
 //class intro
 class stu{
