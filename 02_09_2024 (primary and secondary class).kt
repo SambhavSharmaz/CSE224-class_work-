@@ -48,16 +48,27 @@ fun main() {
     c.intro()
 }
 //area of square and rectangle
-open class rec(var a:Double; var b:Double){
-    fun area();Double{
-        return a*b
+open class Rec(var a: Double, var b: Double) {
+    fun area(): Double {
+        return a * b
     }
-    open fun display{
-        println("area is ${area()}")
-    }
-}
-class sqa(var a:Double; var b:Double){
-    override fun display{
-        println("area is ${area()}")
+
+    open fun display() {
+        println("Area is ${area()}")
     }
 }
+
+class Sqa(a: Double) : Rec(a, a) {
+    override fun display() {
+        println("Area of the square is ${area()}")
+    }
+}
+
+fun main() {
+    val rectangle = Rec(4.0, 5.0)
+    rectangle.display()
+
+    val square = Sqa(4.0)
+    square.display()
+}
+
